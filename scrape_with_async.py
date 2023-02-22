@@ -1,10 +1,8 @@
 import asyncio
-from asyncio import gather
 from time import time
 from urllib.parse import urljoin
 
 import aiofiles as aiofiles
-import requests as requests
 from bs4 import BeautifulSoup
 from httpx import AsyncClient
 

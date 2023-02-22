@@ -109,6 +109,7 @@ stop_words.extend(
         "application",
         "customers",
         "intermediate",
+        "using",
 
     ]
 )
