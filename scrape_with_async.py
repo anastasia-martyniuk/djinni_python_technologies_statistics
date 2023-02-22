@@ -34,6 +34,7 @@ async def all_items_href(experience: int, client: AsyncClient, url: str = BASE_U
     options = Options()
     options.add_argument("--ignore-certificate-errors")
     options.add_argument("-lang=uk")
+    options.add_argument("--headless")
 
     driver = webdriver.Chrome(options=options)
     driver.get(url)
@@ -55,8 +56,8 @@ async def all_items_href(experience: int, client: AsyncClient, url: str = BASE_U
 
     driver.close()
 
-    first_page_soup = BeautifulSoup(page_source, "lxml")
-    num_pages =  get_num_pages(first_page_soup)
+    first_page_soup = BeautifulSoup(page_source, "html.parser")
+    num_pages = get_num_pages(first_page_soup)
 
     all_hrefs = [*get_single_page(first_page_soup)]
 

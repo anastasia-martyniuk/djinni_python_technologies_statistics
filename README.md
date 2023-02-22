@@ -8,7 +8,9 @@ Python3 must be already installed!
 ```shell 
 git clone git@github.com:anastasia-martyniuk/taxi-service.git
 python -m venv venv
-source venv/Scripts/activate or source venv/bin/activate
+source venv/bin/activate (Unix)
+or
+venv/Scripts/activate (Windows)
 pip install -r requirements.txt
 python main.py
 ```
